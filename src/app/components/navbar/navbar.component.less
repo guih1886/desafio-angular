@@ -1,0 +1,31 @@
+@main-background-color: #011a41;
+@main-font-color: #fff;
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    background-color: @main-background-color;
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+        li {
+            color: @main-font-color;
+            font-size: 1.5em;
+            cursor: pointer;
+            text-decoration: none;
+            list-style: none;
+
+            padding: 30px;
+        }
+
+        li:hover {
+            background-color: #01317e;
+        }
+    }
+}
