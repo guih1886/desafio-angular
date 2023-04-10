@@ -7,7 +7,7 @@ const routes: Routes = [
     { path: '', component: InsertStudentComponent },
     { path: 'insert-student', component: InsertStudentComponent },
     { path: 'show-students', component: ShowStudentsComponent },
-    { path: '**', redirectTo: '', component: ShowStudentsComponent },
+    { path: '**', redirectTo: '' },
 ]
 
 @NgModule({
