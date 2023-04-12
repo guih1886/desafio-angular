@@ -3,7 +3,8 @@ export interface Students {
     nome: string;
     nota1: number;
     nota2: number;
-    media: number | null;
+    media: number;
+    situacao: string;
 }
 
 export const estudantes: Students[] = []

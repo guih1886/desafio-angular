@@ -12,14 +12,22 @@ export class StudentsService {
     return this.lista
   }
 
+  adicionarEstudante(nome: string, nota1: number, nota2: number) {
+    this.id++;
+    this.lista.push({ id: this.id, nome: nome, nota1: nota1, nota2: nota2, media: this.calcularMedia(nota1, nota2), situacao: this.calcularSituacao(nota1, nota2) })
+    alert("Estudante adicionado com sucesso na lista.")
+  }
+
   calcularMedia(nota1: number, nota2: number) {
     return (nota1 + nota2) / 2;
   }
 
-  adicionarEstudante(nome: string, nota1: number, nota2: number) {
-    this.id++;
-    this.lista.push({ id: this.id, nome: nome, nota1: nota1, nota2: nota2, media: this.calcularMedia(nota1, nota2) })
-    alert("Estudante adicionado com sucesso na lista.")
+  calcularSituacao(nota1: number, nota2: number): string {
+    if (this.calcularMedia(nota1, nota2) >= 7) {
+      return "Aprovado";
+    } else {
+      return "Reprovado";
+    }
   }
 
 }
