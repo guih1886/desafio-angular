@@ -9,12 +9,14 @@ export class StudentsService {
   id = 0;
 
   getAll() {
-    return this.lista
+    this.lista = JSON.parse(localStorage.getItem("estudantes") || "[]");
+    return this.lista;
   }
 
   adicionarEstudante(nome: string, nota1: number, nota2: number) {
     this.id++;
     this.lista.push({ id: this.id, nome: nome, nota1: nota1, nota2: nota2, media: this.calcularMedia(nota1, nota2), situacao: this.calcularSituacao(nota1, nota2) })
+    localStorage.setItem("estudantes", JSON.stringify(this.lista));
     alert("Estudante adicionado com sucesso na lista.")
   }
 
