@@ -6,6 +6,7 @@
         <input type="text" class="input-nome" [(ngModel)]="nome" placeholder="Digite o nome do aluno">
         <input type="text" class="input-nota" [(ngModel)]="nota1" placeholder="Digite a nota 1">
         <input type="text" class="input-nota" [(ngModel)]="nota2" placeholder="Digite a nota 2">
-        <button type="submit" (click)="adicionarEstudante()">{{estado}}</button>
+        <button type="submit" (click)="adicionarEstudante()" *ngIf="estado === 'Inserir'">{{estado}}</button>
+        <button type="submit" (click)="alterarEstudante()" *ngIf="estado === 'Alterar'">{{estado}}</button>
     </div>
 </div>

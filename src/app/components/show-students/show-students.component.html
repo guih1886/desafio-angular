@@ -1,28 +1,36 @@
-<div class="container-list">
+<div *ngIf="list.length > 0 " class="container-list">
+    <div class="cabecalho">
+        <div class="cabecalho-itens">
+            <p>Nome</p>
+        </div>
+        <div class="cabecalho-itens">
+            <p>Média</p>
+        </div>
+        <div class="cabecalho-itens">
+            <p>Situação</p>
+        </div>
+        <div class="cabecalho-itens">
+            <p>Ações</p>
+        </div>
+    </div>
+    <div class="content" *ngFor="let item of list">
+        <div class="content-itens">
+            {{item.nome}}
+        </div>
+        <div class="content-itens">
+            {{item.media}}
+        </div>
+        <div class="content-itens">
+            {{item.situacao}}
 
-    <table>
-        <td class="td-nome"> Nome
-            <div class="div-tr">
-                <tr class="tr-nome" *ngFor="let item of list">{{item.nome}}</tr>
-            </div>
-        </td>
-        <td class="td-media"> Média
-            <div class="div-tr">
-                <tr class="tr-media" *ngFor="let item of list">{{item.media}}</tr>
-            </div>
-        </td>
-        <td class="td-situacao"> Situação
-            <div class="div-tr">
-                <tr class="tr-situacao" *ngFor="let item of list">{{item.situacao}}</tr>
-            </div>
-        </td>
-        <td class="td-acoes"> Ações
-            <div class="div-tr">
-                <tr class="tr-acoes" *ngFor="let item of list">
-                    <button (click)="alterarEstudante(item.id)">Alterar</button>
-                    <button (click)="excluirEstudante(item.id)">Excluir</button>
-                </tr>
-            </div>
-        </td>
-    </table>
+        </div>
+        <div class="content-itens">
+            <button class="button-alterar" (click)="alterarEstudante(item.id)">Alterar</button>
+            <button class="button-excluir" (click)="excluirEstudante(item.id)">Excluir</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="list.length === 0 " class="container-list">
+    <p style="color: white; font-size: 2.5em;">Sem alunos cadastrados</p>
 </div>

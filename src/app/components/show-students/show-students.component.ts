@@ -14,6 +14,7 @@ export class ShowStudentsComponent implements OnInit {
     private estudante: StudentsService
   ) { }
 
+  //inicializa a tabela
   ngOnInit(): void {
     this.list = this.estudante.getAll();
   }

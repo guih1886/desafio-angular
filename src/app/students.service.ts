@@ -11,6 +11,7 @@ export class StudentsService {
   nome: string | undefined;
   nota1: number | undefined;
   nota2: number | undefined;
+  idEstudante: number = 0;
   estado = 'Inserir'
 
   constructor(
@@ -37,17 +38,16 @@ export class StudentsService {
   alterarEstudante(id: number) {
     this.router.navigate(['insert-students']);
     this.estado = 'Alterar';
-    const estudante = this.lista.find((item) => item.id === id);
-    this.nome = estudante?.nome;
-    this.nota1 = estudante?.nota1;
-    this.nota2 = estudante?.nota2;
-    this.excluirEstudante(id)
+    const estudante = this.lista.find((item) => item.id === id)!;
+    this.idEstudante = estudante.id;
+    return estudante
   }
-
+  //calcula a media do aluno
   calcularMedia(nota1: number, nota2: number) {
     return (nota1 + nota2) / 2;
   }
 
+  //calcula a situacao do aluno
   calcularSituacao(nota1: number, nota2: number): string {
     if (this.calcularMedia(nota1, nota2) >= 7) {
       return "Aprovado";
@@ -70,6 +70,10 @@ export class StudentsService {
 
   getNota2(): string {
     return JSON.stringify(this.nota2)
+  }
+
+  getidEstudante() {
+    return this.idEstudante;
   }
 
 }
