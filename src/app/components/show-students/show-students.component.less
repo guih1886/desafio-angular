@@ -15,6 +15,7 @@
         width: 60vw;
         height: 10vh;
         background-color: @main-background-color;
+        border: 1px solid @main-background-color;
 
         .cabecalho-itens {
             display: flex;
@@ -33,7 +34,7 @@
         width: 60vw;
         height: 5vh;
         background-color: @main-background-color;
-        border: 1px solid black;
+        border: 1px solid #3550e9;
 
         .content-itens {
             display: flex;
@@ -81,4 +82,218 @@
         }
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .container-list {
+
+        .cabecalho {
+            margin-top: 10px;
+            display: flex;
+            width: 80vw;
+            height: 10vh;
+            background-color: @main-background-color;
+            border: 1px solid @main-background-color;
+
+            .cabecalho-itens {
+                display: flex;
+                width: 20vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 1.5em;
+            }
+        }
+
+        .content {
+            display: flex;
+            width: 80vw;
+            height: 5vh;
+            background-color: @main-background-color;
+            border: 1px solid black;
+
+            .content-itens {
+                display: flex;
+                width: 25vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 1.1em;
+                background-color: #3550e9;
+
+            }
+
+            .button-alterar {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: @main-background-color;
+                color: @main-font-color;
+                border: 0;
+            }
+
+            .button-alterar:hover {
+                background-color: #1a38df;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .button-excluir {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: red;
+                color: @main-font-color;
+                border: 0;
+            }
+
+            .button-excluir:hover {
+                background-color: rgb(104, 5, 5);
+                border: 0;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container-list {
+
+        .cabecalho {
+            margin-top: 10px;
+            display: flex;
+            width: 80vw;
+            height: 10vh;
+            background-color: @main-background-color;
+            border: 1px solid @main-background-color;
+
+            .cabecalho-itens {
+                display: flex;
+                width: 20vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 1.5em;
+            }
+        }
+
+        .content {
+            display: flex;
+            width: 80vw;
+            height: 5vh;
+            background-color: @main-background-color;
+            border: 1px solid black;
+
+            .content-itens {
+                display: flex;
+                width: 25vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 1.1em;
+                background-color: #3550e9;
+
+            }
+
+            .button-alterar {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: @main-background-color;
+                color: @main-font-color;
+                border: 0;
+            }
+
+            .button-excluir {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: red;
+                color: @main-font-color;
+                border: 0;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container-list {
+
+        .cabecalho {
+            margin-top: 10px;
+            display: flex;
+            width: 80vw;
+            height: 10vh;
+            background-color: @main-background-color;
+            border: 1px solid @main-background-color;
+
+            .cabecalho-itens {
+                display: flex;
+                width: 20vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 0.8em;
+            }
+        }
+
+        .content {
+            display: flex;
+            width: 80vw;
+            height: 5vh;
+            background-color: @main-background-color;
+            border: 1px solid black;
+
+            .content-itens {
+                display: flex;
+                width: 25vw;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                height: 100%;
+                color: @main-font-color;
+                font-size: 0.8em;
+                background-color: #3550e9;
+
+            }
+
+            .button-alterar {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: @main-background-color;
+                color: @main-font-color;
+                border: 0;
+            }
+
+            .button-excluir {
+                margin: 5px;
+                font-size: 8px;
+                width: 40%;
+                height: 35px;
+                background-color: red;
+                color: @main-font-color;
+                border: 0;
+            }
+
+        }
+
+    }
 }
