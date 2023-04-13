@@ -18,4 +18,13 @@ export class ShowStudentsComponent implements OnInit {
     this.list = this.estudante.getAll();
   }
 
+  excluirEstudante(id: number) {
+    this.estudante.excluirEstudante(id);
+    this.list = this.estudante.getAll();
+  }
+
+  alterarEstudante(id: number) {
+    this.estudante.alterarEstudante(id);
+  }
+
 }

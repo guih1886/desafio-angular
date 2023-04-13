@@ -1,23 +1,28 @@
 <div class="container-list">
-    <table border="1" *ngFor="let item of list">
-        <td class="td-dados">
-            Dados
-            <tr>Nome: </tr>
-            <tr>Média: </tr>
-            <tr>Situação: </tr>
+
+    <table>
+        <td class="td-nome"> Nome
+            <div class="div-tr">
+                <tr class="tr-nome" *ngFor="let item of list">{{item.nome}}</tr>
+            </div>
         </td>
-        <td class="td-valores">
-            Valores
-            <tr>{{item.nome}}</tr>
-            <tr>{{item.media}}</tr>
-            <tr>{{item.situacao}}</tr>
+        <td class="td-media"> Média
+            <div class="div-tr">
+                <tr class="tr-media" *ngFor="let item of list">{{item.media}}</tr>
+            </div>
+        </td>
+        <td class="td-situacao"> Situação
+            <div class="div-tr">
+                <tr class="tr-situacao" *ngFor="let item of list">{{item.situacao}}</tr>
+            </div>
         </td>
         <td class="td-acoes"> Ações
-            <br>
-            <br>
-            <tr><button>Alterar</button></tr>
-            <tr><button>Excluir</button></tr>
+            <div class="div-tr">
+                <tr class="tr-acoes" *ngFor="let item of list">
+                    <button (click)="alterarEstudante(item.id)">Alterar</button>
+                    <button (click)="excluirEstudante(item.id)">Excluir</button>
+                </tr>
+            </div>
         </td>
-
     </table>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StudentsService, } from 'src/app/students.service';
 
 @Component({
@@ -7,10 +7,20 @@ import { StudentsService, } from 'src/app/students.service';
   styleUrls: ['./insert-student.component.less']
 })
 
-export class InsertStudentComponent {
+export class InsertStudentComponent implements OnInit {
   @Input() nome: string = "";
   @Input() nota1: string = "";
   @Input() nota2: string = "";
+  estado = ""
+
+  ngOnInit(): void {
+    this.estado = this.estudades.getEstado();
+    if (this.estado == "Alterar") {
+      this.nome = JSON.parse(this.estudades.getNome());
+      this.nota1 = this.estudades.getNota1();
+      this.nota2 = this.estudades.getNota2();
+    }
+  }
 
   constructor(
     private estudades: StudentsService
