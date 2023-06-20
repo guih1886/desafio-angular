@@ -2,7 +2,7 @@
 
 Projeto de cadastros CRUD simples desenvolvido em Angular e LESS. O sistema utliza o localStorage do navegador como banco de dados provisório.
 
-| :placard: Vitrine.Dev |     |
+| :placard: Vitrine.Dev |    Guilherme Henrique    |
 | -------------  | --- |
 | :sparkles: Nome        | **Projeto Crud Angular**
 | :label: Tecnologias | Angular, LESS
